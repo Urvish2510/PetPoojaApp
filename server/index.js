@@ -17,7 +17,7 @@ petpooja.use(helmet());
 // Application Routes
 petpooja.use("/auth", Auth)
 
-petpooja.listen(5000, () => { 
+petpooja.listen(1122, () => { 
     ConnectDB()
         .then(() => {
             console.log("Server is running !!!");
