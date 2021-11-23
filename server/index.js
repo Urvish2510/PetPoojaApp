@@ -21,7 +21,7 @@ petpooja.use(cors());
 petpooja.use(express.json());
 petpooja.use(helmet());
 petpooja.use(passport.initialize());
-petpooja.use(passport.session());
+// petpooja.use(passport.session());
 
 // Application Routes
 petpooja.use("/auth", Auth)
