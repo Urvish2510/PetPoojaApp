@@ -16,7 +16,6 @@ const Router = express.Router();
 
 Router.get("/r/:_id", async (req, res) => {
   try {
-    //http://localhost:1122/restaurant/?city=surat
     const { _id } = req.params;
 
     const foods = await FoodModel.find({ restaurant: _id });
@@ -37,7 +36,6 @@ Router.get("/r/:_id", async (req, res) => {
 
 Router.get("/c/:category", async (req, res) => {
   try {
-    //http://localhost:1122/restaurant/?city=surat
     const { category } = req.params;
 
     const foods = await FoodModel.find({
