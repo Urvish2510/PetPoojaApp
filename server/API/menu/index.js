@@ -17,7 +17,6 @@ const Router = express.Router();
 Router.get("/list/:_id", async (req, res) => {
   try {
     const { _id } = req.params;
-
     const menus = await MenuModel.findById({ _id });
 
     if (!menus) {
@@ -44,9 +43,9 @@ Router.get("/image/:_id", async (req, res) => {
   try {
     const { _id } = req.params;
     const menuImages = await ImageModel.findOne(_id);
-    
+
     if (!menuImages) {
-        return res.status(404).json({error: 'Images Not Found'});
+      return res.status(404).json({ error: "Images Not Found" });
     }
     return res.json({ menuImages });
   } catch (error) {

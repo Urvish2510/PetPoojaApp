@@ -1,6 +1,4 @@
 import express from "express";
-// import { multerUploads, dataUri } from "../../utils/multer";
-// import { uploader } from "../../config/cloudinaryConfig";
 import cloudinary from "../../config/cloudinaryConfig";
 import upload from "../../utils/multer";
 
@@ -10,9 +8,6 @@ import { ImageModel } from "../../database/image";
 // Create a Router
 const Router = express.Router();
 
-// const router = require("express").Router();
-// const cloudinary = require("../../config/cloudinaryConfig");
-// const upload = require("../../utils/multer");
 Router.post("/", upload.single("image"), async (req, res) => {
   try {
     // Upload image to cloudinary
