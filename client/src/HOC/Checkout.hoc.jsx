@@ -1,22 +1,22 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-// Layout
-import HomeLayout from "../layouts/Homepage.layout.jsx";
+// layout
+import CheckoutLayout from "../layouts/Checkout.layout";
 
-function HomeLayoutHoc({ component: Component, ...rest }) {
+function CheckoutLayoutHoc({ component: Component, ...rest }) {
   return (
     <>
       <Route
         {...rest}
         component={(props) => (
-          <HomeLayout>
+          <CheckoutLayout>
             <Component {...props} />
-          </HomeLayout>
+          </CheckoutLayout>
         )}
       />
     </>
   );
 }
 
-export default HomeLayoutHoc;
+export default CheckoutLayoutHoc;

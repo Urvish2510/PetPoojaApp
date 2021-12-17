@@ -39,9 +39,9 @@ petpooja.use("/restaurant", Restaurant);
 petpooja.use("/food", Food);
 petpooja.use("/menu", Menu);
 petpooja.use("/image", Image);
-zomato.use("/order", Order);
-zomato.use("/review", Review);
-zomato.use("/user", User);
+// zomato.use("/order", Order);
+// zomato.use("/review", Review);
+// zomato.use("/user", User);
 
 petpooja.listen(1122, () => {
   ConnectDB()

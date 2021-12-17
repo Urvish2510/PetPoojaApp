@@ -3,12 +3,13 @@ import { TiStarOutline } from "react-icons/ti";
 import { RiDirectionLine, RiShareForwardLine } from "react-icons/ri";
 import { BiBookmarkPlus } from "react-icons/bi";
 
-// Components
+// components
 import Navbar from "../Components/Navbar";
 import ImageGrid from "../Components/Restaurant/ImageGrid";
 import InfoButton from "../Components/Restaurant/InfoButton";
 import RestaurantInfo from "../Components/Restaurant/RestaurantInfo";
 import Tabs from "../Components/Restaurant/Tabs";
+import CartContainer from "../Components/Cart/CartContainer";
 
 function RestaurantLayout({ children }) {
   const [restaurant, setRestaurant] = useState({
@@ -41,7 +42,7 @@ function RestaurantLayout({ children }) {
           address={restaurant?.address}
         />
         <div className="my-4 flex flex-wrap gap-3 mx-auto">
-          <InfoButton isActive>
+          <InfoButton isActive={true}>
             <TiStarOutline /> Add Review
           </InfoButton>
           <InfoButton>
@@ -59,6 +60,7 @@ function RestaurantLayout({ children }) {
         </div>
         {children}
       </div>
+      <CartContainer />
     </>
   );
 }
